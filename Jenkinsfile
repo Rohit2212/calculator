@@ -1,9 +1,9 @@
 pipeline{
     agent any;
     
-    environment{
-        //environment variables
-    }
+    // environment{
+    //     //environment variables
+    // }
     
     tools{
         nodejs 'jenkins-jobs-node'

@@ -1,31 +1,27 @@
-pipeline{
+pipeline {
     agent any;
     
-    // environment{
-    //     //environment variables
-    // }
-    
-    tools{
+    tools {
         nodejs 'jenkins-jobs-node'
     }
     
-    stages{
-        stage('Initialize'){
-            steps{
+    stages {
+        stage('Initialize') {
+            steps {
                 sh '''
                     npm install
                 '''
             }
         }
-        // stage('Unit Tests'){
-        //     steps{
-        //         sh '''
-        //             npm run test -- --watchAll=false
-        //         '''
-        //     }
-        // }
-        stage('Build'){
-            steps{
+        stage('Unit Tests') {
+            steps {
+                sh '''
+                    npm run test -- --watchAll=false
+                '''
+            }
+        }
+        stage('Build') {
+            steps {
                 sh '''
                     npm run build
                 '''

@@ -2,7 +2,7 @@ pipeline {
     agent any;
     
     tools {
-        nodejs 'jenkins-jobs-node'
+        nodejs 'jenkins-demo-node'
     }
     
     stages {
